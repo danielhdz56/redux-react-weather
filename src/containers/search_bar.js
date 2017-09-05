@@ -16,14 +16,6 @@ export default class SearchBar extends Component{
 
     onFormSubmit(event){
         event.preventDefault();
-        const apiKey = '270264d693fadd9bc5163c19cd93cf4e';
-        const cityName = event.target.value;
-        const url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
-        axios.get(url).then(res=> {
-            console.log(res.data);
-        }).catch(err => {
-            console.log(err);
-        });
     }
 
     render(){
